@@ -23,10 +23,15 @@ export const authOptions: NextAuthOptions = {
       async session({ token, session }) {
          if(token) {
           //if (!session.user) return;
+          // @ts-ignore
              session.user.id = token.id
+             // @ts-ignore
              session.user.name = token.name
+             // @ts-ignore
              session.user.email = token.email
+             // @ts-ignore
              session.user.image = token.picture
+             // @ts-ignore
              session.user.username = token.username
          }
 

@@ -28,6 +28,7 @@ export async function PATCH(req: Request) {
         // update username
         await db.user.update({
             where: {
+                //  @ts-ignore
                 id: session.user.id,
             },
             data: {

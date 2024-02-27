@@ -17,6 +17,7 @@ export async function PATCH(req: Request) {
 
     const existingVote = await db.commentVote.findFirst({
         where: {
+          //  @ts-ignore
             userId: session.user.id,
             commentId,
         },
@@ -28,6 +29,7 @@ export async function PATCH(req: Request) {
             where: {
                 userId_commentId: {
                   commentId,
+                  //  @ts-ignore
                   userId: session.user.id,
                 },
             },
@@ -39,6 +41,7 @@ export async function PATCH(req: Request) {
             where: {
                 userId_commentId: {
                   commentId,
+                  //  @ts-ignore
                   userId: session.user.id,
                 },
             },
@@ -54,6 +57,7 @@ export async function PATCH(req: Request) {
       await db.commentVote.create({
         data: {
           type: voteType,
+          //  @ts-ignore
           userId: session.user.id,
           commentId,
         },

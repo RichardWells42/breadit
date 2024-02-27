@@ -30,7 +30,7 @@ const PostVoteServer = async ({
         if (vote.type === 'DOWN') return acc - 1
         return acc
       }, 0)
-
+      {/* @ts-expect-error server component */}
       _currentVote = post.votes.find((vote) => vote.userId === session?.user.id)?.type
     } else {
       _votesAmt = initialVotesAmt!

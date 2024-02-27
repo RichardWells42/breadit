@@ -8,6 +8,7 @@ const CustomFeed = async () => {
 
   const followedCommunities = await db.subscription.findMany({
     where: {
+        // @ts-ignore
         userId: session?.user.id,
     },
     include: {
