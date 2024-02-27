@@ -46,6 +46,7 @@ const CommentsSection = async ({ postId }: CommentsSectionProps) => {
               )
 
               const topLevelCommentVote = topLevelComment.votes.find(
+                //  @ts-ignore
                 (vote) => vote.userId === session?.user.id
               )
 
@@ -74,6 +75,7 @@ const CommentsSection = async ({ postId }: CommentsSectionProps) => {
                     )
       
                     const replyVote = reply.votes.find(
+                      //  @ts-ignore
                       (vote) => vote.userId === session?.user.id
                     )
 

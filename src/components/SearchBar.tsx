@@ -66,6 +66,7 @@ const SearchBar: FC<SearchBarProps> = ({}) => {
       ref={commandRef}
       className='relative rounded-lg border max-w-lg z-50 overflow-visible'>
       <CommandInput
+        //  @ts-ignore
         isLoading={isFetching}
         onValueChange={(text) => {
           setInput(text)
