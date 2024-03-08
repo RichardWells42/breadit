@@ -22,7 +22,7 @@ interface EditorProps {
   subredditId: string
 }
 
-export const Editor: React.FC<EditorProps> = ({ subredditId }) => {
+const Editor: React.FC<EditorProps> = ({ subredditId }) => {
   const {
     register,
     handleSubmit,
@@ -213,3 +213,5 @@ export const Editor: React.FC<EditorProps> = ({ subredditId }) => {
     </div>
   )
 }
+
+export default Editor
